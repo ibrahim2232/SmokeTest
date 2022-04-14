@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="31" time="0.895">
+    <testcase classname="Registration_success_test" name="US02TC01_Choose_a_username_that_can_contain_any_chars_but_it_cannot_be_blank" time="0.125">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "223-93-9192"...............................passed
+And user sends data for the FirstName "ali".................................passed
+And user sends data for the LastName "bayram"...............................passed
+And user sends data for the Username "gglddfggbayramx"......................passed
+And user sends data for the Email "tffeasdfggm2a9test@gmail.com"............passed
+And user provides the password "Team82822"..................................passed
+Then user clicks on the register button and see the success message as "Registration Saved".passed
+Then user takes screenshot of successful login..............................passed
+Then user creates the records to a correspondent file.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US02TC03_email_id_cannot_be_created_without_&quot;@&quot;_sign_and_&quot;.com&quot;_extension" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "373-93-9822"...............................passed
+And user sends data for the FirstName "ali".................................passed
+And user sends data for the LastName "bayram"...............................passed
+And user sends data for the Username "alibayramx"...........................passed
+And user sends data for the Email without @ sign and .com extension "team29gmail".passed
+And user provides the password "Team82822"..................................passed
+Then user clicks on the register............................................passed
+Then user takes screenshot of unsuccessful login due to failed email........passed
+Then user creates the records to a correspondent file.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US02TC04_email_cannot_be_left_blank" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "373-93-9822"...............................passed
+And user sends data for the FirstName "ali".................................passed
+And user sends data for the LastName "bayram"...............................passed
+And user sends data for the Username "alibayramx"...........................passed
+And user sends data for the blank Email ""..................................passed
+And user provides the password "Team82822"..................................passed
+Then user clicks on the register............................................passed
+Then user takes screenshot of unsuccessful login due to failed email........passed
+Then user creates the records to a correspondent file.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC01 valid ssn test" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+Then user provides ssn id "<SSN>"...........................................passed
+Then verify the SSN number is valid.........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC02 ssn blank test" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And leave the SSN box blank.................................................passed
+Then verify SSN required message is displayed...............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC03 ssn without &quot;-&quot; test" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter nine digit SSN without - ssn "123457896"..........................passed
+Then verify the SSN invalid message is displayed............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC04 8 digit ssn test" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter eight digit SSN "45823698"........................................passed
+Then verify the SSN invalid message is displayed............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC04 8 digit ssn test 2" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter eight digit SSN "342-25-968"......................................passed
+Then verify the SSN invalid message is displayed............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC05 10 digit ssn test" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter ten digit SSN "4582369810"........................................passed
+Then verify the SSN invalid message is displayed............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC05 10 digit ssn test 2" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter ten digit SSN "342-25-96825"......................................passed
+Then verify the SSN invalid message is displayed............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC06 valid firstname test" time="0">
+        <system-out>
+            <![CDATA[And enter valid firstname "mahmut"..........................................passed
+Then verify first name is valid.............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC06 valid firstname test 2" time="0">
+        <system-out>
+            <![CDATA[And enter valid firstname "1234567".........................................passed
+Then verify first name is valid.............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC06 valid firstname test 3" time="0">
+        <system-out>
+            <![CDATA[And enter valid firstname "Can123"..........................................passed
+Then verify first name is valid.............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC06 valid firstname test 4" time="0">
+        <system-out>
+            <![CDATA[And enter valid firstname "/*.,Can12".......................................passed
+Then verify first name is valid.............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC07 blank firstname test" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And leave first name box blank..............................................passed
+Then verify first name required message is displayed........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC08 valid lastname test" time="0.004">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter valid lastname "Can"..............................................passed
+Then verify lastname is valid...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC08 valid lastname test 2" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter valid lastname "1234567"..........................................passed
+Then verify lastname is valid...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC08 valid lastname test 3" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter valid lastname "Can123"...........................................passed
+Then verify lastname is valid...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC08 valid lastname test 4" time="0.015">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And enter valid lastname "/*.,Can12"........................................passed
+Then verify lastname is valid...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="US01_TC09 blank lastname test" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And leave last name blank...................................................passed
+Then verify last name required message is displayed.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="test password strength &quot;ZEHRA.1&quot;" time="0.015">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+Given users provides the password "ZEHRA.1".................................passed
+Then user valides the password strength "rgb(221, 221, 221)"................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="test password strength &quot;zehra.1&quot;" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+Given users provides the password "zehra.1".................................passed
+Then user valides the password strength "rgb(221, 221, 221)"................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="test password strength &quot;Zehra..&quot;" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+Given users provides the password "Zehra..".................................passed
+Then user valides the password strength "rgb(221, 221, 221)"................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="test password strength &quot;Zehra11&quot;" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+Given users provides the password "Zehra11".................................passed
+Then user valides the password strength "rgb(221, 221, 221)"................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="test password strength &quot;Zehr.1&quot;" time="0.001">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+Given users provides the password "Zehr.1"..................................passed
+Then user valides the password strength "rgb(255, 0, 0)"....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="user_verifies_that_with_at_least_1_lowercase_char_for_stronger_password" time="0.014">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "385-24-6841"...............................passed
+And user sends data for the FirstName "kelvin"..............................passed
+And user sends data for the LastName "peter"................................passed
+And user sends data for the Username "friends"..............................passed
+And user sends data for the Email "peterfriends@gmail.com"..................passed
+And user sends data for the New Password "HAPPINESSISJOy84".................passed
+And user sends data for the New password confirmation "HAPPINESSISJOy84"....passed
+Then user clicks on the registration button and see the message registration saved  as "<registration saved>".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="user_verifies_that_with_at_least_1_lowercase_char_for_stronger_password_2" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "841-22-6342"...............................passed
+And user sends data for the FirstName "epp".................................passed
+And user sends data for the LastName "man"..................................passed
+And user sends data for the Username "save".................................passed
+And user sends data for the Email "wade54@gmail.com"........................passed
+And user sends data for the New Password "HAPPINESSISKEy84".................passed
+And user sends data for the New password confirmation "HAPPINESSISKEy84"....passed
+Then user clicks on the registration button and see the message registration saved  as "<registration saved>".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="user_verifies_that_with_at_least_1_lowercase_char_for_stronger_password_3" time="0.015">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "841-22-6343"...............................passed
+And user sends data for the FirstName "epps"................................passed
+And user sends data for the LastName "mans".................................passed
+And user sends data for the Username "saves"................................passed
+And user sends data for the Email "waded54@gmail.com".......................passed
+And user sends data for the New Password "HAPPINESSISPEACE1"................passed
+And user sends data for the New password confirmation "HAPPINESSISPEACE1"...passed
+Then user clicks on the registration button and see the message registration saved  as "<registration saved>".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="user_verifies_that_with_at_least_1_lowercase_char_for_stronger_password_4" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "841-22-6344"...............................passed
+And user sends data for the FirstName "eppss"...............................passed
+And user sends data for the LastName "manss"................................passed
+And user sends data for the Username "savess"...............................passed
+And user sends data for the Email "wadeds54@gmail.com"......................passed
+And user sends data for the New Password "HAPPINESSISLOVE@".................passed
+And user sends data for the New password confirmation "HAPPINESSISLOVE@"....passed
+Then user clicks on the registration button and see the message registration saved  as "<registration saved>".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="user_verifies_that_with_at_least_1_lowercase_char_for_stronger_password_5" time="0">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user sends data for the SSN "841-22-6345"...............................passed
+And user sends data for the FirstName "epsss"...............................passed
+And user sends data for the LastName "mansss"...............................passed
+And user sends data for the Username "savesss"..............................passed
+And user sends data for the Email "wadedss54@gmail.com".....................passed
+And user sends data for the New Password "REALITY"..........................passed
+And user sends data for the New password confirmation "R"...................passed
+Then user clicks on the registration button and see the message registration saved  as "<registration saved>".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Registration_success_test" name="Deneme Jenkins" time="0">
+        <system-out>
+            <![CDATA[Given user write test for jenkins...........................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
