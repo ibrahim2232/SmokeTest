@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import org.junit.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.RegistrationPage;
@@ -319,8 +320,17 @@ public class RegistrationUiSteps extends ReusableMethods {
 
     }
 
+    @Test
+    @Given("user write test for jenkins")
+    public void userWriteTestForJenkins() {
 
-
-
-
+        System.out.println("this is test for jenkins");
+        System.out.println("this is test for jenkins");
+        System.out.println("this is test for jenkins");
+        System.out.println("this is test for jenkins");
+        System.out.println("this is test for jenkins");
+        System.out.println("this is test for jenkins");
+        System.out.println("this is test for jenkins");
+        System.out.println("this is test for jenkins");
+    }
 }

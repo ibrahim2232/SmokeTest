@@ -181,3 +181,8 @@ Feature: Registration_success_test
       | 841-22-6343 | epps      | mans     | saves    | waded54@gmail.com      | HAPPINESSISPEACE1 | HAPPINESSISPEACE1         |
       | 841-22-6344 | eppss     | manss    | savess   | wadeds54@gmail.com     | HAPPINESSISLOVE@  | HAPPINESSISLOVE@          |
       | 841-22-6345 | epsss     | mansss   | savesss  | wadedss54@gmail.com    | REALITY           | R                         |
+
+
+    Scenario: Deneme Jenkins
+
+      Given user write test for jenkins
